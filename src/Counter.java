@@ -22,18 +22,13 @@ public class Counter {
     }
 
     static void count(int firstArgument, int secondArgument) throws CounterValidationException {
-        if (secondArgument < firstArgument) {
+        if (secondArgument < firstArgument)
             throw new CounterValidationException();
-        }
 
         int argumentDiference = secondArgument - firstArgument;
 
-        for (int index = 0; index < argumentDiference; index++) {
-            if (index == 0) {
-                System.out.println(firstArgument);
-            }
+        for (int index = 0; index < argumentDiference; index++)
+            System.out.println(firstArgument + index);
 
-            System.out.println(firstArgument += 1);
-        }
     }
 }
